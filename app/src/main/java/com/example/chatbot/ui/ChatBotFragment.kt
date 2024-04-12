@@ -36,7 +36,7 @@ class ChatBotFragment : Fragment() {
             val messageText = binding.messageInput.text.toString().trim()
             if (messageText.isNotEmpty()) {
                 val message = Message(content = messageText, role = "user")
-                viewModel.createChatCompletion(listOf(message), "gpt-3.5-turbo") // Modell entsprechend anpassen 3.5 ist billiger
+                viewModel.createChatCompletion(listOf(message), "gpt-4-turbo") // Modell entsprechend anpassen 3.5 ist billiger
                 binding.messageInput.text = null
 
 
@@ -47,6 +47,7 @@ class ChatBotFragment : Fragment() {
 
         viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            binding.responseText.visibility = if (isLoading) View.GONE else View.VISIBLE
         }
 
         viewModel.chatResponse.observe(viewLifecycleOwner) { response ->
