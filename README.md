@@ -16,3 +16,25 @@ https://platform.openai.com/docs/api-reference/chat
 - **Retrofit**
 
 - (Um einen kompletten Chat zu erzeugen sollte eine Datenbank erstellt werden, in der man die Nachrichten abspeichern kann.)
+
+## Build.Gradle-App
+
+In Ihrem `build.gradle` der App-Ebene sollten Sie sicherstellen, dass Sie die folgenden Plugins und Abhängigkeiten inkludieren, um alle Funktionen und Bibliotheken, die in diesem Projekt verwendet werden, korrekt zu integrieren:
+
+```gradle
+plugins {
+    id("kotlin-kapt")
+}
+
+dependencies {
+    // Retrofit zur Netzwerkkommunikation
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+
+    // Moshi zur JSON-Serialisierung
+    implementation("com.squareup.moshi:moshi:1.15.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.15.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
+}
