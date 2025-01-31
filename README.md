@@ -17,6 +17,8 @@ https://platform.openai.com/docs/api-reference/chat
 
 - (Um einen kompletten Chat zu erzeugen sollte eine Datenbank erstellt werden, in der man die Nachrichten abspeichern kann.)
 
+
+Wichtig !!
 ## Build.Gradle-App
 
 In Ihrem `build.gradle` der App-Ebene sollten Sie sicherstellen, dass Sie die folgenden Plugins und Abhängigkeiten inkludieren, um alle Funktionen und Bibliotheken, die in diesem Projekt verwendet werden, korrekt zu integrieren:
